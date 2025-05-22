@@ -15,7 +15,7 @@ const Home = () => {
         const response = await axios.get(
           "https://mxpertztestapi.onrender.com/api/sciencefiction"
         );
-        setStories(response.data);
+        setStories(response.data.slice(0,4));
       } catch (error) {
         console.error("Failed to fetch stories:", error);
       } finally {
